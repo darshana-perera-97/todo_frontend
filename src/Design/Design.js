@@ -4,12 +4,15 @@ import LoadingSc from "./LoadingSc/LoadingSc";
 import TopBar from "./TopBar/TopBar";
 
 export default function Design() {
-  //   const [t, setT] = React.useState(false);
+  const [t, setT] = React.useState(false);
+  setTimeout(() => {
+    setT(true);
+  }, 2000);
   return (
     <div>
-      <LoadingSc />
-      {/* <TopBar /> */}
-      {/* <BottomBar style={{ bottom: "0px" }} /> */}
+      {!t && <LoadingSc />}
+      {t && <TopBar />}
+      {t && <BottomBar style={{ bottom: "0px" }} />}
     </div>
   );
 }
