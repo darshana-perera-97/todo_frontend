@@ -1,4 +1,5 @@
 import React from "react";
+import Body from "./Body/Body";
 import BottomBar from "./BottomBar/BottomBar";
 import LoadingSc from "./LoadingSc/LoadingSc";
 import TopBar from "./TopBar/TopBar";
@@ -12,6 +13,7 @@ export default function Design() {
     <div>
       {!t && <LoadingSc />}
       {t && <TopBar />}
+      {t && <Body />}
       {t && <BottomBar style={{ bottom: "0px" }} />}
     </div>
   );
